@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div>
+    <table class="table table-bordered">
+        <tr>
+          <th scope="col" colspan="7" class="text-center">Office Employee Details</th>
+        </tr> 
+        <tr class="thead-light">
+          <th scope="col" class="align-middle">#</th>
+          <th scope="col" class="align-middle">Image</th>
+          <th scope="col" class="align-middle">Emp code</th>
+          <th scope="col" class="align-middle">Name</th>
+          <th scope="col" class="align-middle">Contact</th>
+          <th scope="col" class="align-middle">Address</th>
+          <th scope="col" class="align-middle">Category</th>
+
+        </tr>
+      <tbody>
+        <tr *ngFor="let employee of employeeData; let i=index" (click)="openModal(employee)">
+          <td class="align-middle">{{i+1}}</td>
+          <td class="align-middle"><img [src]="employee.image" width="42" height="42"></td>
+          <td class="align-middle">{{employee.empcode}}</td>
+          <td class="align-middle">{{employee.name}}</td>
+          <td class="align-middle">{{employee.contact}}</td>
+          <td class="align-middle">{{employee.address}}</td>
+          <td class="align-middle">{{employee.category}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
